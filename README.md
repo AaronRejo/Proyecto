@@ -24,7 +24,6 @@ Para mi este proyecto es interesante porque utilizaría datos y se usarían para
             - Asistencias
             - Faltas
             - Bloqueos  
-   
      2. Presentar estadísticas de los partidos
      3. El equipo con mayor puntaje se mostrara como ganador del partido
 
