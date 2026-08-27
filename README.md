@@ -13,4 +13,16 @@ Para mi este proyecto es interesante porque utilizaría datos y se usarían para
 ## Algoritmo
 
 1. Inicio
-2. 
+2. Seleccionar nombre de equipo
+3. Selección de jugadores
+4. Simular partidos entre equipos en base a datos de jugadores
+     - Puntos
+     - Rebotes
+     - Robos
+     - Perdida de Balón
+     - Asistencias
+     - Faltas
+     - Bloqueos
+5. Presentar estadísticas de los partidos
+6. Poner una tabla donde están listados como mayor puntaje hasta menor puntaje
+7. El equipo con mayor puntaje se mostrara como ganador 
