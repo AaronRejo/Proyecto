@@ -23,7 +23,7 @@ Para mi este proyecto es interesante porque utilizaría datos y se usarían para
       - Perdida de Balón
       - Asistencias
       - Faltas
-       - Bloqueos  
+      - Bloqueos  
    
      1. Presentar estadísticas de los partidos
      2. El equipo con mayor puntaje se mostrara como ganador del partido
