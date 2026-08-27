@@ -10,7 +10,7 @@ El proyecto de Basketball Fantasy va a consistir en crear un programa que simule
 
 Para mi este proyecto es interesante porque utilizaría datos y se usarían para tomar decisiones en el pgroama. Las estadísticas que se muestran para los jugadores no solo van a ser para mostrar, sino que se usaran para realizar cálculos que crearan resultados para cada equipo. Pero no solo eso, sino también, se va a ser un reto que se me va a ser muy interesante ya que voy a tener que estar buscando a fondo lo que se aprende en clase y poder aplicarlo en situaciones que podrían ser mas complejas. Por otro lado este proyecto se me hace interesante ya que junta esto de analizar datos con uno deporte que me gusta mucho en donde voy a poder llegar mas a fondo con el trabajo. 
 
-## Algoritmo
+## Pseudoalgoritmo
 
 1. Inicio
 2. Seleccionar nombre de equipo
