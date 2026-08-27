@@ -15,14 +15,19 @@ Para mi este proyecto es interesante porque utilizaría datos y se usarían para
 1. Inicio
 2. Seleccionar nombre de equipo
 3. Selección de jugadores
-4. Simular partidos entre equipos en base a datos de jugadores
-     - Puntos
-     - Rebotes
-     - Robos
-     - Perdida de Balón
-     - Asistencias
-     - Faltas
-     - Bloqueos
-5. Presentar estadísticas de los partidos
-6. Poner una tabla donde están listados como mayor puntaje hasta menor puntaje
-7. El equipo con mayor puntaje se mostrara como ganador 
+4. Simular partidos entre equipos en base a datos de jugadores (Repetir lo siguiente durante 4 partidos)
+        Datos:
+          - Puntos
+          - Rebotes
+          - Robos
+          - Perdida de Balón
+          - Asistencias
+          - Faltas
+          - Bloqueos
+   
+     1. Presentar estadísticas de los partidos
+     2. El equipo con mayor puntaje se mostrara como ganador del partido
+
+5. Hacer el partido final entre el primero y el segundo lugar
+6. El ganador de ese partido se declarara como el campeón del torneo
+7. Fin
