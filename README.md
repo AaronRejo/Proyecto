@@ -9,3 +9,8 @@ Con estas estadísticas se creo el juego de Basketball Fantasy, en donde los par
 El proyecto de Basketball Fantasy va a consistir en crear un programa que simule este tipo de juego utilizando estadísticas de jugadores de la temporada 2025 - 2026. El usuario tendrá un presupuesto determinado y dentro va a seleccionar jugadores de una lista para formar su propio equipo. Estos jugadores tendrán diferentes precios dependiendo de sus características. Al estar creando partidos que van a estar simulados donde estas estadísticas se van a estar sacando, y al finalizar estas estadísticas se van a sumar para el equipo en donde están. El usuario no va a competir contra personas reales, sino con el programa donde tendrá diferentes equipos. Con todas estas estadísticas se va a buscar quien es el que mayor puntuación obtuvo en el que se le nombrara el ganador de esa temporada.
 
 Para mi este proyecto es interesante porque utilizaría datos y se usarían para tomar decisiones en el pgroama. Las estadísticas que se muestran para los jugadores no solo van a ser para mostrar, sino que se usaran para realizar cálculos que crearan resultados para cada equipo. Pero no solo eso, sino también, se va a ser un reto que se me va a ser muy interesante ya que voy a tener que estar buscando a fondo lo que se aprende en clase y poder aplicarlo en situaciones que podrían ser mas complejas. Por otro lado este proyecto se me hace interesante ya que junta esto de analizar datos con uno deporte que me gusta mucho en donde voy a poder llegar mas a fondo con el trabajo. 
+
+## Algoritmo
+
+1. Inicio
+2. 
