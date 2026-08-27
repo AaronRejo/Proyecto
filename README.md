@@ -16,7 +16,7 @@ Para mi este proyecto es interesante porque utilizaría datos y se usarían para
 2. Seleccionar nombre de equipo
 3. Selección de jugadores
 4. Simular partidos entre equipos en base a datos de jugadores (Repetir lo siguiente durante 4 partidos)
-        Datos:
+   Datos:
           - Puntos
           - Rebotes
           - Robos
