@@ -1,54 +1,89 @@
-#Introducción
+# Bienvenida
 
 print('Bienvenidos a Fantasy Basketball')
-print('Seleccióna tu equipo con un presupeusto de $80')
+print('Selecciona tu equipo con un presupuesto de $80')
 
-#Selección de Jugadores
+
+# Funciones Obtener jugadores
+
+def obtener_jugador(numero):
+    if numero == 1:
+        return 'Lebron James'
+    elif numero == 2:
+        return 'Stephen Curry'
+    elif numero == 3:
+        return 'Nikola Jokic'
+    elif numero == 4:
+        return 'Jason Tatum'
+
+# Funciones Obtener Precio
+
+def obtener_precio(numero):
+    if numero == 1:
+        return 40
+    elif numero == 2:
+        return 35
+    elif numero == 3:
+        return 32
+    elif numero == 4:
+        return 25
+
+
+# Funciones calculos
+
+def calcular_presupuesto(precio1, precio2):
+    return 80 - precio1 - precio2
+
+
+def calcular_fantasy(puntos, rebotes, asistencias):
+    return puntos + rebotes + asistencias
+
+
+def comparar_equipos(puntos_equipo, otro_equipo):
+    if puntos_equipo > otro_equipo:
+        return 'GANASTE'
+    else:
+        return 'PERDISTE'
+
+
+# Selección de jugadores
 
 presupuesto = 80
 
-print('Sleccióna dos jugadores maximo')
+print('Selecciona dos jugadores máximo')
 print('1. Lebron James - $40')
 print('2. Stephen Curry - $35')
 print('3. Nikola Jokic - $32')
 print('4. Jason Tatum - $25')
 
-jugador1 = 'Lebron James'
-jugador2 = 'Stephen Curry'
-jugador3 = 'Nikola Jokic'
-jugador4 = 'Jason Tatum'
-
-seleccion1 = int(input('pon numero de jugador: '))
-seleccion2 = int(input('pon numero de jugador: '))
-
-if seleccion1 == 1 and seleccion2 == 2:
-    print('presupuesto: ', presupuesto - 75)
-    print('Equipo: ', jugador1, ' ', jugador2)
-
-if seleccion1 == 1 and seleccion2 == 3:
-    print('Equipo: ', jugador1, ' ', jugador3)
-    print('presupuesto: ', presupuesto - 72)
-
-if seleccion1 == 1 and seleccion2 == 4:
-    print('presupuesto: ', presupuesto - 15)
-    print('Equipo: ', jugador1, ' ', jugador4)
-
-if seleccion1 == 2 and seleccion2 == 3:
-    print('presupuesto: ', presupuesto - 67)
-    print('Equipo: ', jugador2, ' ', jugador3)
-
-if seleccion1 == 2 and seleccion2 == 4:
-    print('presupuesto: ', presupuesto - 60)
-    print('Equipo: ', jugador2, ' ', jugador4)
-
-if seleccion1 == 3 and seleccion2 == 4:
-    print('presupuesto: ', presupuesto - 57)
-    print('Equipo: ', jugador3, ' ', jugador4)
+seleccion1 = int(input('Pon número de jugador: '))
+seleccion2 = int(input('Pon número de jugador: '))
 
 
-# Estadísticas de los jugadores
+# Obtener jugadores y precios
 
-print('\nEstadísticas de los jugadores')
+nombre1 = obtener_jugador(seleccion1)
+nombre2 = obtener_jugador(seleccion2)
+
+precio1 = obtener_precio(seleccion1)
+precio2 = obtener_precio(seleccion2)
+
+
+# Mostrar equipo
+
+print('Equipo:', nombre1, nombre2)
+
+
+# Presupuesto
+
+presupuesto_restante = calcular_presupuesto(precio1, precio2)
+
+print('Presupuesto restante:', presupuesto_restante)
+
+
+# Estadísticas
+
+print('Estadísticas de los jugadores')
 
 # Lebron James
 puntos1 = 28
@@ -70,66 +105,50 @@ puntos4 = 26
 rebotes4 = 9
 asistencias4 = 5
 
-#Equipo Falso test
-
-equipo_falso = 86
 
 # Puntos Fantasy
 
-fantasy1 = puntos1 + rebotes1 + asistencias1
-fantasy2 = puntos2 + rebotes2 + asistencias2
-fantasy3 = puntos3 + rebotes3 + asistencias3
-fantasy4 = puntos4 + rebotes4 + asistencias4
+fantasy1 = calcular_fantasy(puntos1, rebotes1, asistencias1)
+fantasy2 = calcular_fantasy(puntos2, rebotes2, asistencias2)
+fantasy3 = calcular_fantasy(puntos3, rebotes3, asistencias3)
+fantasy4 = calcular_fantasy(puntos4, rebotes4, asistencias4)
 
 
-# Puntos totales del equipo
+# Equipo falso
 
-print('\nPuntos Fantasy:')
+equipo_falso = 86
+
+
+# Puntos totales
 
 if seleccion1 == 1 and seleccion2 == 2:
-    print('Puntos totales del equipo:', fantasy1 + fantasy2)
-    print('Otro Equipo: ', equipo_falso)
-    if fantasy1 + fantasy2 > equipo_falso:
-        print('GANASTE')
-    else:
-        print('PERDISTE')
-    
+    puntos_totales = fantasy1 + fantasy2
 
-if seleccion1 == 1 and seleccion2 == 3:
-    print('Puntos totales del equipo:', fantasy1 + fantasy3)
-    print('Otro Equipo: ', equipo_falso)
-    if fantasy1 + fantasy3 > equipo_falso:
-        print('GANASTE')
-    else:
-        print('PERDISTE')
+elif seleccion1 == 1 and seleccion2 == 3:
+    puntos_totales = fantasy1 + fantasy3
 
-if seleccion1 == 1 and seleccion2 == 4:
-    print('Puntos totales del equipo:', fantasy1 + fantasy4)
-    print('Otro Equipo: ', equipo_falso)
-    if fantasy1 + fantasy4 > equipo_falso:
-        print('GANASTE')
-    else:
-        print('PERDISTE')
+elif seleccion1 == 1 and seleccion2 == 4:
+    puntos_totales = fantasy1 + fantasy4
 
-if seleccion1 == 2 and seleccion2 == 3:
-    print('Puntos totales del equipo:', fantasy2 + fantasy3)
-    print('Otro Equipo: ', equipo_falso)
-    if fantasy2 + fantasy3 > equipo_falso:
-        print('GANASTE')
+elif seleccion1 == 2 and seleccion2 == 3:
+    puntos_totales = fantasy2 + fantasy3
 
-if seleccion1 == 2 and seleccion2 == 4:
-    print('Puntos totales del equipo:', fantasy2 + fantasy4)
-    print('Otro Equipo: ', equipo_falso)
-    if fantasy2 + fantasy4 > equipo_falso:
-        print('GANASTE')
-    else:
-        print('PERDISTE')
+elif seleccion1 == 2 and seleccion2 == 4:
+    puntos_totales = fantasy2 + fantasy4
 
-if seleccion1 == 3 and seleccion2 == 4:
-    print('Puntos totales del equipo:', fantasy3 + fantasy4)
-    print('Otro Equipo: ', equipo_falso)
-    if fantasy3 + fantasy4 > equipo_falso:
-        print('GANASTE')
-    else:
-        print('PERDISTE')
-    
+elif seleccion1 == 3 and seleccion2 == 4:
+    puntos_totales = fantasy3 + fantasy4
+
+else:
+    puntos_totales = 0
+
+
+# Resultado
+
+if puntos_totales > 0:
+    print('Puntos Fantasy:', puntos_totales)
+    print('Otro Equipo:', equipo_falso)
+
+    resultado = comparar_equipos(puntos_totales, equipo_falso)
+    print(resultado)
+
