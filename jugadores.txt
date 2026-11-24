@@ -1,0 +1,4 @@
+Lebron James,40,28,8,7
+Stephen Curry,35,30,5,6
+Nikola Jokic,32,27,12,10
+Jason Tatum,25,26,9,5

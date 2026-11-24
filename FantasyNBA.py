@@ -1,12 +1,11 @@
-
-# Bienvenida
+#Bienvenida
 
 print('Bienvenidos a Fantasy Basketball')
 
 print('Selecciona tu equipo con un presupuesto de $80')
 
 
-# Manejo de cadenas
+#Introducción
 
 nombre_equipo = input('Escribe el nombre de tu equipo: ')
 
@@ -29,24 +28,27 @@ nombre_codigo = nombre_equipo.replace(' ', '_')
 print('Identificador del equipo:', nombre_codigo)
 
 
-# Jugadores organizados en una matriz
+#Jugadores
 
-# [Nombre, Precio, Puntos, Rebotes, Asistencias]
+#Leer información de los jugadores desde archivo
 
-jugadores = [
+jugadores = []
 
-    ['Lebron James', 40, 28, 8, 7],
+archivo = open('jugadores.txt', 'r')
 
-    ['Stephen Curry', 35, 30, 5, 6],
+for linea in archivo:
 
-    ['Nikola Jokic', 32, 27, 12, 10],
+    datos = linea.strip().split(',')
 
-    ['Jason Tatum', 25, 26, 9, 5]
+    jugador = [datos[0], int(datos[1]), int(datos[2]),
+               int(datos[3]), int(datos[4])]
 
-]
+    jugadores.append(jugador)
+
+archivo.close()
 
 
-# Funciones
+#Funciones
 
 def calcular_fantasy(puntos, rebotes, asistencias):
 
@@ -68,35 +70,16 @@ def comparar_equipos(puntos_equipo, otro_equipo):
         return 'PERDISTE'
 
 
-# Buscador de jugadores
+#Mostrar jugadores
 
-busqueda = input('\nBusca un jugador por su nombre: ')
-
-encontrado = False
-
-for i in range(len(jugadores)):
-
-    if busqueda.lower() in jugadores[i][0].lower():
-
-        print('Jugador encontrado:', jugadores[i][0])
-
-        encontrado = True
-
-if encontrado == False:
-
-    print('No se encontro el jugador')
-
-
-# Mostrar jugadores
-
-print('\nSelecciona dos jugadores con un presupuesto de $80')
+print('Selecciona dos jugadores con un presupuesto de $80')
 
 for i in range(len(jugadores)):
 
     print(i + 1, jugadores[i][0], '- $' + str(jugadores[i][1]))
 
 
-# Selección de jugadores
+#Selección de jugadores
 
 equipo = []
 
@@ -131,7 +114,7 @@ while len(equipo) < 2:
 
 # Mostrar equipo y calcular puntos
 
-print('\nEquipo:', nombre_equipo.upper())
+print('Equipo:', nombre_equipo.upper())
 
 puntos_totales = 0
 
@@ -141,26 +124,18 @@ for indice in equipo:
 
     print(jugador[0])
 
-    fantasy = calcular_fantasy(
-
-        jugador[2],
-
-        jugador[3],
-
-        jugador[4]
-
-    )
+    fantasy = calcular_fantasy(jugador[2], jugador[3], jugador[4])
 
     print('Puntos Fantasy del jugador:', fantasy)
 
     puntos_totales += fantasy
 
 
-# Resultado
+#Resultado
 
 equipo_falso = 86
 
-print('\nPuntos totales de tu equipo:', puntos_totales)
+print('Puntos totales de tu equipo:', puntos_totales)
 
 print('Puntos del otro equipo:', equipo_falso)
 
@@ -169,3 +144,26 @@ resultado = comparar_equipos(puntos_totales, equipo_falso)
 print('Resultado:', resultado)
 
 print('Presupuesto final:', presupuesto)
+
+
+#Guardar datos
+
+archivo = open('resultados_fantasy.txt', 'a')
+
+archivo.write('Equipo: ' + nombre_equipo + '\n')
+
+archivo.write('Jugadores:\n')
+
+for indice in equipo:
+
+    archivo.write(jugadores[indice][0] + '\n')
+
+archivo.write('Puntos totales: ' + str(puntos_totales) + '\n')
+
+archivo.write('Resultado: ' + resultado + '\n')
+
+archivo.write('Presupuesto final: ' + str(presupuesto) + '\n')
+
+archivo.write('-------------------------\n')
+
+archivo.close()
